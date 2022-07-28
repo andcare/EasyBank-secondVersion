@@ -69,17 +69,20 @@ body {
   color: #A3A5B1;
 }
 body h1 {
-  font-size: clamp(42.63px, 2.664375rem + 33.13 * (100vw - 375px) / 1065, 75.76px);
+  font-size: clamp(2.665rem, 2.665rem + (1vw - 0.23437rem) * 3.1098, 4.735rem);
   font-weight: 300;
   text-align: center;
   line-height: 1.2;
   color: #363955;
 }
 body h2 {
-  font-size: clamp(24px, 1.5rem + 8 * (100vw - 375px) / 1065, 32px);
+  font-size: clamp(1.5rem, 1.5rem + (1vw - 0.23437rem) * 0.7497, 1.999rem);
   font-weight: 300;
   text-align: center;
   color: #363955;
+}
+body p {
+  font-size: clamp(13.5px, 0.84375rem + (1vw - 3.75px) * 0.4225, 18px);
 }
 
 .call-to-action {

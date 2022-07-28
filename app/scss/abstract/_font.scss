@@ -27,8 +27,8 @@ $font-weight-navigation: $fw-bold;
 $font-size-body: clamp(13.5px, calc(0.84375rem + ((1vw - 3.75px) * 0.4225)), 18px);
      /* Note: The calc base value (0.84375rem) MUST be stated in REM to maintain accessibility */
     /* Where: calc = min_font_size_in_rem + (max_font_size - min_font_size) * ((100vw - min_viewport_including_px_unit) / (max_viewport - min_viewport)) */
-$font-size-primary-heading: clamp(42.63px, calc(2.664375rem + (75.76 - 42.63) * ((100vw - 375px) / (1440 - 375))), 75.76px);
-$font-size-secondary-heading: clamp(24px, calc(1.5rem + (32 - 24) * ((100vw - 375px) / (1440 - 375))), 32px);
+$font-size-primary-heading: clamp(2.665rem, calc(2.665rem + ((1vw - 0.23437000000000002rem) * 3.1098)), 4.735rem);
+$font-size-secondary-heading: clamp(1.5rem, calc(1.5rem + ((1vw - 0.23437000000000002rem) * 0.7497)), 1.999rem);
 
 $font-size-navigation: $fs-300;
 $font-size-button: $fs-300;
