@@ -22,11 +22,16 @@ html:focus-within {
 html,
 body {
     height: 100%;
+    font-size: 100%;
 }
 
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
 }
 
 a:not([class]) {

@@ -4,16 +4,34 @@ $fw-light: 300;
 $fw-regular: 400;
 $fw-bold: 700;
 
-$fs-400: 1rem;
-$fs-500: 1.125rem;
+$fs-200: 0.633rem; // 10.128px
+$fs-300: 0.844rem; // 13.504px
+$fs-400: 1.125rem; //18px
+$fs-500: 1.5rem; // 24px
+$fs-600: 1.999rem; // 32px
+$fs-700: 2.665rem; // 42.635px
+$fs-800: 3.552rem; // 56.832px
+$fs-900: 4.735rem; // 75.757px
 
 $font-family-body: $primary-font-family;
-$font-family-heading: $primary-font-family;
-
-// $font-size-body: $fs-500;
-// $font-size-heading: ;
-// $font-size-secondary-heading: ;
-// $font-size-navigation: ;
-// $font-size-button: ;
+$font-family-primary-heading: $primary-font-family;
+$font-family-secondary-heading: $primary-font-family;
 
 $font-weight-body: $fw-regular;
+$font-weight-primary-heading: $fw-light;
+$font-weight-secondary-heading: $fw-light;
+$font-weight-button: $fw-bold;
+$font-weight-navigation: $fw-bold;
+
+    /* 13.5px @ 375px increasing to 18px @ 1440px */
+$font-size-body: clamp(13.5px, calc(0.84375rem + ((1vw - 3.75px) * 0.4225)), 18px);
+     /* Note: The calc base value (0.84375rem) MUST be stated in REM to maintain accessibility */
+    /* Where: calc = min_font_size_in_rem + (max_font_size - min_font_size) * ((100vw - min_viewport_including_px_unit) / (max_viewport - min_viewport)) */
+$font-size-primary-heading: clamp(42.63px, calc(2.664375rem + (75.76 - 42.63) * ((100vw - 375px) / (1440 - 375))), 75.76px);
+$font-size-secondary-heading: clamp(24px, calc(1.5rem + (32 - 24) * ((100vw - 375px) / (1440 - 375))), 32px);
+
+$font-size-navigation: $fs-300;
+$font-size-button: $fs-300;
+
+// $font-size-heading: ;
+// $font-size-secondary-heading: ;

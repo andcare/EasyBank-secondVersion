@@ -1,3 +1,6 @@
+/* 13.5px @ 375px increasing to 18px @ 1440px */
+/* Note: The calc base value (0.84375rem) MUST be stated in REM to maintain accessibility */
+/* Where: calc = min_font_size_in_rem + (max_font_size - min_font_size) * ((100vw - min_viewport_including_px_unit) / (max_viewport - min_viewport)) */
 *,
 *::before,
 *::after {
@@ -22,11 +25,16 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  font-size: 100%;
 }
 
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:not([class]) {
@@ -55,4 +63,49 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+body {
+  font-family: "Public Sans", sans-serif;
+  color: #A3A5B1;
+}
+body h1 {
+  font-size: clamp(42.63px, 2.664375rem + 33.13 * (100vw - 375px) / 1065, 75.76px);
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.2;
+  color: #363955;
+}
+body h2 {
+  font-size: clamp(24px, 1.5rem + 8 * (100vw - 375px) / 1065, 32px);
+  font-weight: 300;
+  text-align: center;
+  color: #363955;
+}
+
+.call-to-action {
+  display: inline-block;
+  position: relative;
+  padding-block: 15px;
+  padding-inline: 30px;
+  border-radius: 50px;
+  background: linear-gradient(to right, #2CBE53, #2AB4D6);
+  color: #FAFAFA;
+  z-index: 1;
+  transition: all 300ms linear;
+}
+.call-to-action::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 500ms;
+  border-radius: inherit;
+  background: linear-gradient(to right, #90E7A7, #9FDEEE);
+}
+.call-to-action:hover::before {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
