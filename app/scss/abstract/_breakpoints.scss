@@ -12,7 +12,8 @@ $breakpoints-down: (
 $breakpoints-up: (
     // 'medium': '30.0625em'
     'medium': '43.8125em',
-    'large': '68.75em'
+    'large': '68.75em',
+    'x-large': '90em'
 );
 
 @mixin breakpoint-down($screen) {
