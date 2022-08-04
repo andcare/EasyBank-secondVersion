@@ -76,7 +76,7 @@ body h1 {
 }
 body h2 {
   font-size: clamp(1.5rem, 1.5rem + (1vw - 0.23437rem) * 0.7497, 1.999rem);
-  font-weight: 300;
+  font-weight: 400;
   color: #363955;
 }
 body p {
@@ -113,13 +113,23 @@ body p {
   opacity: 1;
 }
 
+.icon {
+  aspect-ratio: 1/1;
+  height: 67px;
+}
+
 .logo {
   height: 20px;
   width: 140px;
 }
 
+.default-container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 43.8125em) {
-  .default-container {
+  .hero__container {
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -269,69 +279,68 @@ body p {
   background-color: #FAFAFA;
 }
 .hero__img-container {
-  position: relative;
-  background: url(/images/bg-intro-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   height: 306px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: url(/images/bg-intro-mobile.svg);
 }
 @media screen and (min-width: 43.8125em) {
   .hero__img-container {
     order: 2;
     height: 590px;
-    background: url(/images/bg-intro-desktop.svg);
+    background-size: 896px;
     background-repeat: no-repeat;
     background-position: -73px -85px;
-    background-size: 896px;
+    background: url(/images/bg-intro-desktop.svg);
   }
 }
 @media screen and (min-width: 68.75em) {
   .hero__img-container {
     height: 655px;
-    background: url(/images/bg-intro-desktop.svg);
+    margin-right: -26.5625rem;
+    background-size: 1246px;
     background-repeat: no-repeat;
     background-position: -70px -261px;
-    background-size: 1246px;
-    margin-right: -26.5625rem;
+    background: url(/images/bg-intro-desktop.svg);
   }
 }
 .hero__image {
   position: absolute;
   top: -7.8rem;
+  left: 50%;
   width: 353px;
   margin: 0 auto;
   transform: translateX(-50%);
-  left: 50%;
 }
 @media screen and (min-width: 43.8125em) {
   .hero__image {
-    min-width: 500px;
     top: 2px;
     left: 237px;
+    min-width: 500px;
   }
 }
 @media screen and (min-width: 68.75em) {
   .hero__image {
-    min-width: 712px;
     top: -115px;
     left: 512px;
+    min-width: 712px;
   }
 }
 .hero__text-container {
   text-align: center;
-  padding-block: 45px;
-  padding-inline: 30px;
+  padding: 45px 30px 80px;
 }
 @media screen and (min-width: 43.8125em) {
   .hero__text-container {
     display: flex;
+    text-align: left;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
-    padding-block: 0;
     padding-left: 20px;
     padding-right: 15%;
+    padding-block: 0;
   }
 }
 @media screen and (min-width: 68.75em) {
@@ -356,13 +365,85 @@ body p {
   }
 }
 .hero__description {
-  margin-bottom: 35px;
   line-height: 1.5;
+  margin-bottom: 35px;
 }
 @media screen and (min-width: 43.8125em) {
   .hero__description {
     margin-bottom: 40px;
   }
+}
+
+.features {
+  background-color: #F3F4F6;
+}
+@media screen and (max-width: 43.75em) {
+  .features {
+    text-align: center;
+    padding-block: 65px;
+    padding-inline: 30px;
+  }
+}
+@media screen and (min-width: 43.8125em) {
+  .features {
+    padding-block: 110px;
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 43.75em) {
+  .features__heading {
+    padding-bottom: 1.25rem;
+    padding-inline: 2.375rem;
+    letter-spacing: -1px;
+    line-height: 1.2;
+  }
+}
+.features__description {
+  margin-bottom: 60px;
+  line-height: 1.7;
+}
+@media screen and (min-width: 43.8125em) {
+  .features__item-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.features__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 43.75em) {
+  .features__item:not(:last-child) {
+    margin-bottom: 35px;
+  }
+}
+@media screen and (min-width: 43.8125em) {
+  .features__item {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-inline: 27px;
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 68.75em) {
+  .features__item {
+    flex-basis: 25%;
+  }
+}
+.features__icon {
+  margin-bottom: 20px;
+}
+.features__item-title {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #363955;
+  margin-bottom: 25px;
+}
+.features__item-description {
+  font-size: 0.844rem;
 }
 
 .header {
