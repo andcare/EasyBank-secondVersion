@@ -24,11 +24,19 @@
             letter-spacing: -1px;
             line-height: 1.2;
         }
+
+        @include breakpoint-up (medium) {
+            padding-inline: 27px;
+        }
     }
 
     &__description {
         margin-bottom: 60px;
         line-height: 1.7;
+
+        @include breakpoint-up (medium) {
+            padding-inline: 27px;
+        }
     }
 
     &__item-container {
@@ -37,6 +45,7 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            gap: 35px 0;
         }
     }
 
