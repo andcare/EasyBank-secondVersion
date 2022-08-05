@@ -22,6 +22,7 @@ $font-weight-primary-heading: $fw-light;
 $font-weight-secondary-heading: $fw-regular;
 $font-weight-button: $fw-bold;
 $font-weight-navigation: $fw-regular;
+$font-weight-item-title: $fw-regular;
 
     /* 0.84375rem(13.5px) @ 23.4375rem(375px) increasing to 1.125rem(18px) @ 90rem(1440px) */
 $font-size-body: clamp(0.84375rem, calc(0.84375rem + (1.125 - 0.84375) * ((100vw - 23.4375rem) / (90 - 23.4375))), 1.125rem);
@@ -29,12 +30,10 @@ $font-size-body: clamp(0.84375rem, calc(0.84375rem + (1.125 - 0.84375) * ((100vw
 $font-size-primary-heading: clamp(2rem, calc(2rem + ((1vw - 0.234375rem) * 2.3316)), 3.552rem);
 $font-size-secondary-heading: clamp(1.5rem, calc(1.5rem + ((1vw - 0.23437000000000002rem) * 0.7497)), 1.999rem);
 
-// $font-size-feature-title: ;
 
+$font-size-item-title: $fs-400;
 $font-size-feature-description: $fs-300;
 $font-size-navigation: $fs-300;
 $font-size-navigation-mobile: $fs-400;
 $font-size-button: $fs-300;
 
-// $font-size-heading: ;
-// $font-size-secondary-heading: ;

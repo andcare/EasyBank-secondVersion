@@ -79,8 +79,8 @@
     }
 
     &__item-title {
-        font-size: $fs-400;
-        font-weight: $fw-regular;
+        font-size: $font-size-item-title;
+        font-weight: $font-weight-item-title;
         color: $font-color-on-background-900;
         margin-bottom: 25px;
     }
