@@ -38,6 +38,13 @@
         border-radius: 5px;
         outline: none;
         background-color: $neutral-color-background-50;
+        cursor: pointer;
+
+        &:hover {
+            .articles__title {
+                color: $font-color-on-hover;
+            }
+        }
 
         @include breakpoint-up (medium) {
             flex-basis: 40%;
@@ -71,6 +78,7 @@
         margin-bottom: 15px;
         line-height: 1.2;
         color: $font-color-on-background-900;
+        transition: all 300ms ease-in-out;
     }
 
     &__preview-description {

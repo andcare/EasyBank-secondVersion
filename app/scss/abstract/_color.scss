@@ -7,6 +7,7 @@
 
 // Primary Colors
 $primary-color-pallete-400: linear-gradient(to right, #2CBE53, #2AB4D6);
+$primary-color-pallete-300: #40D668;
 $primary-color-pallete-200: linear-gradient(to right, #90E7A7, #9FDEEE);
 
 $font-color-on-primary-50: #FAFAFA;
@@ -16,6 +17,9 @@ $font-color-on-background-400: #A3A5B1;
 $font-color-on-background-500: #888A9A;
 $font-color-on-background-600: #6E7184;
 $font-color-on-background-900: #363955;
+
+$font-color-on-hover: $primary-color-pallete-300;
+
 
 // Neutral Colors
 $neutral-color-background-50: #FFFFFF;
