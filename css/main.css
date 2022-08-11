@@ -535,12 +535,29 @@ body p {
 }
 
 .footer {
+  padding-block: 45px;
+  background-color: #363955;
+}
+.footer__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-block: 45px;
-  background-color: #363955;
+}
+@media screen and (min-width: 43.8125em) {
+  .footer__container {
+    height: 190px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 68.75em) {
+  .footer__container {
+    display: grid;
+    max-width: 1110px;
+    grid-template-columns: 286px 189px 416px auto;
+    grid-template-rows: auto;
+  }
 }
 .footer__logo-icon-container {
   display: flex;
@@ -549,7 +566,17 @@ body p {
   justify-content: space-between;
   width: 190px;
   height: 73px;
-  margin-bottom: 35px;
+}
+@media screen and (max-width: 43.75em) {
+  .footer__logo-icon-container {
+    margin-bottom: 35px;
+  }
+}
+@media screen and (min-width: 68.75em) {
+  .footer__logo-icon-container {
+    height: 97px;
+    align-items: start;
+  }
 }
 .footer__icons-list {
   display: flex;
@@ -565,20 +592,36 @@ body p {
 .footer__navigation-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
 }
-.footer__navigation-list:not(:nth-child(3)) {
-  margin-bottom: 20px;
-}
-.footer__navigation-list:not(:nth-child(2)) {
-  margin-bottom: 35px;
+@media screen and (max-width: 43.75em) {
+  .footer__navigation-list {
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__navigation-list:not(:nth-child(3)) {
+    margin-bottom: 20px;
+  }
+  .footer__navigation-list:not(:nth-child(2)) {
+    margin-bottom: 35px;
+  }
 }
 .footer__navigation-link {
   font-size: 0.844rem;
   font-weight: 400;
   color: #F3F4F6;
+  transition: all 300ms ease-in-out;
+}
+.footer__navigation-link:hover {
+  color: #40D668;
+}
+.footer__copyright-cta-container {
+  text-align: center;
+}
+@media screen and (min-width: 43.8125em) {
+  .footer__copyright-cta-container {
+    text-align: right;
+  }
 }
 .footer__call-to-action {
   margin-bottom: 30px;
