@@ -118,6 +118,21 @@ body p {
   height: 67px;
 }
 
+.facebook,
+.youtube,
+.twitter,
+.pinterest,
+.instagram {
+  transition: all 300ms ease-in-out;
+}
+.facebook:hover,
+.youtube:hover,
+.twitter:hover,
+.pinterest:hover,
+.instagram:hover {
+  fill: #40D668;
+}
+
 .logo {
   height: 20px;
   width: 140px;
@@ -588,6 +603,9 @@ body p {
 .footer__icon-link {
   aspect-ratio: 1/1;
   width: 23px;
+}
+.footer__icon-link:hover {
+  fill: #40D668;
 }
 .footer__navigation-list {
   display: flex;
